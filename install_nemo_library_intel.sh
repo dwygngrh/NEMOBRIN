@@ -1,9 +1,8 @@
 #!/bin/bash
-
-module purge
-module load intel/2023.2.0
-module load mpi/2021.10.0 
-##GNU###############
+# Program untuk instalasi library NEMO di HPC BRIN
+# buat executable: chmod +x install_nemo_library.sh
+# run program : ./install_nemo_library.sh
+##############################################
 FC=ifort
 PFC=mpiifort
 CC=icc
