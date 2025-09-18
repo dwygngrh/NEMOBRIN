@@ -19,7 +19,8 @@ Step 1-3 HANYA DIJALANKAN SEKALI SAJA!!
 ## Persiapan source code
 Untuk menginstall NEMO dibutuhkan dua source code 
 1. NEMO   
-2. XIOS.   
+2. XIOS.
+ 
 NEMO melakukan komputasi paralel MPI.
 Perhitungan akan di bagi ke tiap prossesor sehingga tiap prossesor akan memberikan satu output file per perhitungan.    
 Untuk menggabungkan file dari tiap prosessor dibutuhkan software XIOS. 
