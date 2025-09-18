@@ -13,6 +13,7 @@ echo module load mpi/2021.10.0 >> .bashrc
 ### running script library  
 chmod +x install_nemo_library_intel.sh  
 ./install_nemo_library_.sh  
+SCRIPT LIBRARY HANYA DIJALANKAN SEKALI SAJA!!  
 ## Persiapan source code
 Untuk menginstall NEMO dibutuhkan dua source code 
 1. NEMO   
@@ -34,19 +35,13 @@ git clone https://gitlab.com/cerfacs/oasis3-mct.git oasis3
 ### Download WRF dan WPS Untuk model atmosfir  
 git clone https://github.com/wrf-model/WRF.git  
 git clone https://github.com/wrf-model/WPS.git  
-
+## Proses Instalasi Software
 ### 1. INSTALL OASIS-MCT3 (jika ingin rinning model kopel laut-atm)
-
 cd /home/yoga/NEMO42/source/oasis3-mct/util/make_dir
-
 ubah di make.inc 
-
 include  /home/yoga/NEMO42/source/oasis3-mct/util/make_dir/make.intel-RCO-brin
-
 ## buat architecture
-
 cp make.intel18.0.1.163_intelmpi2018.1.163-ddt_nemo make.intel-RCO-brin
-
 ubah di make.intel-RCO-brin
 
 COUPLE          = /home/yoga/NEMO42/source/oasis3-mct
