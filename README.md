@@ -3,7 +3,7 @@ Selamat datang!
 Pembuatan konfigurasi model Regional NEMO di HPC BRIN  
 NEMO yang akan diinstall ialah NEMO versi 4.0 dengan konfigurasi grid 1/48 wilayah timur indonesia  
 
-## 1. Persiapan Library  
+## 1. Persiapan Library Untuk pertama kali masuk akun BRIN HPC
 Saat pertama login anda akan berada di direktory HOME.  
 ### Jalankan perintah ini  
 echo module purge >> .bashrc  
@@ -12,6 +12,11 @@ echo module load mpi/2021.10.0 >> .bashrc
 ### running script library  
 chmod +x install_nemo_library_intel.sh  
 ./install_nemo_library_.sh  
+### install miniconda
+wget https://repo.anaconda.com/miniconda/Miniconda3-py310_24.9.2-0-Linux-x86_64.sh  
+chmod +x Miniconda3-py310_24.9.2-0-Linux-x86_64.sh  
+./Miniconda3-py310_24.9.2-0-Linux-x86_64.sh  
+echo source ${HOME}/miniconda3/etc/profile.d/conda.sh    
 
 ## Step 1 HANYA DIJALANKAN SEKALI SAJA!!  
 
@@ -25,7 +30,9 @@ Catatan :
 - NEMO melakukan komputasi paralel MPI.
 - Perhitungan akan di bagi ke tiap prossesor sehingga tiap prossesor akan memberikan satu output file per perhitungan.    
 - Untuk menggabungkan file dari tiap prosessor dibutuhkan software XIOS. 
-- Untuk NEMO versi 4.2 dibutuhkan XIOS versi 3.0.   
+- Untuk NEMO versi 4.2 dibutuhkan XIOS versi 3.0.
+- Seluruh compiler menggunakan INTEL compiler.
+- Perhatika
 ### buat direktory   
 mkdir NEMO  
 mkdir SOURCE  
