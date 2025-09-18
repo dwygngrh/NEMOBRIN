@@ -21,8 +21,7 @@ echo source ${HOME}/miniconda3/etc/profile.d/conda.sh
 conda activate  
 conda config --add channels conda-forge  
 conda config --set channel_priority strict  
-conda install subversion  
-
+conda install main::svn  
 
 ## Step 1 HANYA DIJALANKAN SEKALI SAJA!!  
 
