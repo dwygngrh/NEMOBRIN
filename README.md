@@ -16,15 +16,15 @@ chmod +x install_nemo_library_intel.sh
 Step 1 HANYA DIJALANKAN SEKALI SAJA!!  
 
 ## 2. Persiapan source code
-Untuk menginstall NEMO dibutuhkan dua source code yaitu NEMO dan XIOS.  
+Untuk menginstall NEMO OCEAN saja dibutuhkan dua source code yaitu NEMO dan XIOS.  
 Jika akan melakukan kopel atmosfir dibutuhkan source code OASIS-MCT3  
 Model atmosfir yang digunakan ialah WRF.  
 Catatan :  
-NEMO melakukan komputasi paralel MPI.
-Perhitungan akan di bagi ke tiap prossesor sehingga tiap prossesor akan memberikan satu output file per perhitungan.    
-Untuk menggabungkan file dari tiap prosessor dibutuhkan software XIOS. 
-Untuk NEMO versi 4.2 dibutuhkan XIOS versi 3.0. Selain itu tersedia XIOS versi 2.0. 
-download source code NEMO dan XIOS melalui link berikut:  
+- Jangan install OASIS dan WRF jika tidak melakukan kopel dengan atmosfir  
+- NEMO melakukan komputasi paralel MPI.
+- Perhitungan akan di bagi ke tiap prossesor sehingga tiap prossesor akan memberikan satu output file per perhitungan.    
+- Untuk menggabungkan file dari tiap prosessor dibutuhkan software XIOS. 
+- Untuk NEMO versi 4.2 dibutuhkan XIOS versi 3.0.   
 ### buat direktory   
 mkdir NEMO  
 mkdir SOURCE  
