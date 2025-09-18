@@ -32,16 +32,21 @@ Catatan :
 - Untuk menggabungkan file dari tiap prosessor dibutuhkan software XIOS. 
 - Untuk NEMO versi 4.2 dibutuhkan XIOS versi 3.0.
 - Seluruh compiler menggunakan INTEL compiler.
-- Perhatika
+## 3. Download Software  
 ### buat direktory   
 mkdir NEMO  
 mkdir SOURCE  
 cd SOURCE  
-### 4. Download XIOS  
+### Download XIOS  
 svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS3/trunk/ xios3    
-### 5. Download NEMO  
+### Download NEMO  
 git clone https://forge.nemo-ocean.eu/nemo/nemo.git nemo42  
-## 3. Download Software  
+### 6. Download OASISMCT Untuk kopel dengan atmosfir  
+git clone https://gitlab.com/cerfacs/oasis3-mct.git oasis3  
+### 7. Download WRF dan WPS Untuk model atmosfir  
+git clone https://github.com/wrf-model/WRF.git  
+git clone https://github.com/wrf-model/WPS.git  
+## 4. Install Software
 ### INSTALL XIOS  
 Jika ingin running kopel atmosfir, XIOS di instal dengan KEY OASIS. 
 Jika hanya running laut saja jangan ditambahkan KEY OASIS  
@@ -54,11 +59,7 @@ Install XIOS dengan KEY OASIS : ./make_xios --full --use_oasis oasis3_mct --prod
  cd NEMO
   arch-linux_local.fcm
 
-### 6. Download OASISMCT Untuk kopel dengan atmosfir  
-git clone https://gitlab.com/cerfacs/oasis3-mct.git oasis3  
-### 7. Download WRF dan WPS Untuk model atmosfir  
-git clone https://github.com/wrf-model/WRF.git  
-git clone https://github.com/wrf-model/WPS.git  
+
 ## Proses Instalasi Software
 ### 8. INSTALL OASIS-MCT3 (jika ingin running model kopel laut-atm) SKIP jika hanya ingin running model ocean
 cd /home/yoga/NEMO42/source/oasis3-mct/util/make_dir  
