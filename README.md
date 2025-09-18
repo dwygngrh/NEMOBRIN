@@ -28,43 +28,32 @@ download source code NEMO dan XIOS melalui link berikut:
 mkdir NEMO  
 mkdir SOURCE  
 cd SOURCE  
-### Download XIOS  
+### 4. Download XIOS  
 svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS3/trunk/ xios3    
-### Download NEMO  
+### 5. Download NEMO  
 git clone https://forge.nemo-ocean.eu/nemo/nemo.git nemo42  
-### Download OASISMCT Untuk kopel dengan atmosfir  
+### 6. Download OASISMCT Untuk kopel dengan atmosfir  
 git clone https://gitlab.com/cerfacs/oasis3-mct.git oasis3  
-### Download WRF dan WPS Untuk model atmosfir  
+### 7. Download WRF dan WPS Untuk model atmosfir  
 git clone https://github.com/wrf-model/WRF.git  
 git clone https://github.com/wrf-model/WPS.git  
 ## Proses Instalasi Software
-### 1. INSTALL OASIS-MCT3 (jika ingin rinning model kopel laut-atm)
+### 8. INSTALL OASIS-MCT3 (jika ingin running model kopel laut-atm) SKIP jika hanya ingin running model ocean
 cd /home/yoga/NEMO42/source/oasis3-mct/util/make_dir
 ubah di make.inc 
 include  /home/yoga/NEMO42/source/oasis3-mct/util/make_dir/make.intel-RCO-brin
 ## buat architecture
 cp make.intel18.0.1.163_intelmpi2018.1.163-ddt_nemo make.intel-RCO-brin
 ubah di make.intel-RCO-brin
-
 COUPLE          = /home/yoga/NEMO42/source/oasis3-mct
-
 NETCDF_INC_DIR= ${NETCDF_INC} 
-
 NETCDF_INCLUDE  = ${NETCDF_INC}
-
-
-# 2. INSTALL XIOS
-
+### 9. INSTALL XIOS
 XIOS dapat di install dengan KEY oasis "-DUSE_OMCT" atau tidak
-
 cd xios2 atau cd xios3
-
 Install XIOS tanpa KEY OASIS : ./make_xios --full --prod --arch Intel_BRIN -j4 |& tee compile_log.txt
-
 Install XIOS dengan KEY OASIS : ./make_xios --full --use_oasis oasis3_mct --prod --arch Intel_BRIN -j4 |& tee compile_log.txt
-
 ############################################################
 # Install NEMO
  cd NEMO
- 
- arch-linux_local.fcm
+  arch-linux_local.fcm
