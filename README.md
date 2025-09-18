@@ -13,7 +13,7 @@ echo module load mpi/2021.10.0 >> .bashrc
 chmod +x install_nemo_library_intel.sh  
 ./install_nemo_library_.sh  
 
-Step 1 HANYA DIJALANKAN SEKALI SAJA!!  
+## Step 1 HANYA DIJALANKAN SEKALI SAJA!!  
 
 ## 2. Persiapan source code
 Untuk menginstall NEMO OCEAN saja dibutuhkan dua source code yaitu NEMO dan XIOS.  
