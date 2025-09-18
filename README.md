@@ -19,6 +19,7 @@ chmod +x install_nemo_library_intel.sh
 Untuk menginstall NEMO OCEAN saja dibutuhkan dua source code yaitu NEMO dan XIOS.  
 Jika akan melakukan kopel atmosfir dibutuhkan source code OASIS-MCT3  
 Model atmosfir yang digunakan ialah WRF.  
+
 Catatan :  
 - Jangan install OASIS dan WRF jika tidak melakukan kopel dengan atmosfir  
 - NEMO melakukan komputasi paralel MPI.
