@@ -1,9 +1,8 @@
 # NEMOBRIN
-Instalasi NEMO di HPC BRIN
 Selamat datang!  
-setting model NEMO di cluster  
-indomodel versi NEMO akan memberikan informasi bagaimana install nemo di cluster.  
+Pembuatan konfigurasi model Regional NEMO di HPC BRIN  
 NEMO yang akan diinstall ialah NEMO versi 4.0 dengan konfigurasi grid 1/48 wilayah timur indonesia  
+
 ## 1. Persiapan Library  
 Saat pertama login anda akan berada di direktory HOME.  
 ### 2. Jalankan perintah ini  
