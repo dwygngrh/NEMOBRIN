@@ -4,10 +4,10 @@ Selamat datang!
 setting model NEMO di cluster
 indomodel versi NEMO akan memberikan informasi bagaimana install nemo di cluster.  
 NEMO yang akan diinstall ialah NEMO versi 4.0 dengan konfigurasi grid 1/48 wilayah timur indonesia  
-# Persiapan Library  
+## Persiapan Library  
 
 
-# Persiapan source code
+## Persiapan source code
 Untuk menginstall NEMO dibutuhkan dua source code 
 1. NEMO 
 2. XIOS. 
