@@ -41,16 +41,16 @@ cd SOURCE
 svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS3/trunk/ xios3    
 ### 5. Download NEMO  
 git clone https://forge.nemo-ocean.eu/nemo/nemo.git nemo42  
-
-### 9. INSTALL XIOS  
+## 3. Download Software  
+### INSTALL XIOS  
 Jika ingin running kopel atmosfir, XIOS di instal dengan KEY OASIS. 
-Jika hanya running laut saja jangan ditambahkan KEY OASIS
-XIOS dapat di install dengan KEY oasis "-DUSE_OMCT" atau tidak
-cd xios2 atau cd xios3
+Jika hanya running laut saja jangan ditambahkan KEY OASIS  
+XIOS dapat di install dengan KEY oasis "-DUSE_OMCT" atau tidak  
+cd xios3  
 Install XIOS tanpa KEY OASIS : ./make_xios --full --prod --arch Intel_BRIN -j4 |& tee compile_log.txt
 Install XIOS dengan KEY OASIS : ./make_xios --full --use_oasis oasis3_mct --prod --arch Intel_BRIN -j4 |& tee compile_log.txt
 ############################################################
-# Install NEMO
+### Install NEMO
  cd NEMO
   arch-linux_local.fcm
 
