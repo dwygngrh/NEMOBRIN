@@ -1,12 +1,15 @@
 # NEMOBRIN
 Instalasi NEMO di HPC BRIN
-Selamat datang!
-setting model NEMO di cluster
+Selamat datang!  
+setting model NEMO di cluster  
 indomodel versi NEMO akan memberikan informasi bagaimana install nemo di cluster.  
 NEMO yang akan diinstall ialah NEMO versi 4.0 dengan konfigurasi grid 1/48 wilayah timur indonesia  
 ## Persiapan Library  
-
-
+### Jalankan perintah ini  
+echo module purge >> .bashrc
+echo module load intel/2023.2.0 >> .bashrc
+echo module load mpi/2021.10.0 >> .bashrc
+### running script  
 ## Persiapan source code
 Untuk menginstall NEMO dibutuhkan dua source code 
 1. NEMO 
