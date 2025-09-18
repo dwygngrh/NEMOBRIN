@@ -20,20 +20,20 @@ Untuk menginstall NEMO dibutuhkan dua source code
 NEMO melakukan komputasi paralel MPI. Perhitungan akan di bagi ke tiap prossesor sehingga tiap prossesor akan memberikan satu output file per perhitungan.  
 Untuk menggabungkan file dari tiap prosessor dibutuhkan software XIOS. 
 Untuk NEMO versi 4.2 dibutuhkan XIOS versi 3.0. Selain itu tersedia XIOS versi 2.0. 
-download source code NEMO dan XIOS melalui link berikut:  
-############################
+download source code NEMO dan XIOS melalui link berikut:
 ### buat direktory   
+############################
 mkdir NEMO  
 mkdir SOURCE  
 cd SOURCE  
 ############################  
-#### Download XIOS  
+### Download XIOS  
 svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS3/trunk/ xios3    
-#### Download NEMO  
+### Download NEMO  
 git clone https://forge.nemo-ocean.eu/nemo/nemo.git nemo42  
-#### Download OASISMCT Untuk kopel dengan atmosfir  
+### Download OASISMCT Untuk kopel dengan atmosfir  
 git clone https://gitlab.com/cerfacs/oasis3-mct.git oasis3  
-#### Download WRF dan WPS Untuk model atmosfir  
+### Download WRF dan WPS Untuk model atmosfir  
 git clone https://github.com/wrf-model/WRF.git  
 git clone https://github.com/wrf-model/WPS.git  
 
