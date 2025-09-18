@@ -9,7 +9,7 @@ Saat pertama login anda akan berada di direktory HOME.
 ### Jalankan perintah ini  
 echo module purge >> .bashrc  
 echo module load intel/2023.2.0 >> .bashrc  
-echo module load mpi/2021.10.0 >> .bashrc  
+echo module load mpi/2021.10.0 >> .bashrc 
 ### running script library  
 chmod +x install_nemo_library_intel.sh  
 ./install_nemo_library_.sh  
@@ -21,7 +21,8 @@ echo source ${HOME}/miniconda3/etc/profile.d/conda.sh
 conda activate  
 conda config --add channels conda-forge  
 conda config --set channel_priority strict  
-conda install main::svn  
+conda install anaconda::pip
+pip install svn
 
 ## Step 1 HANYA DIJALANKAN SEKALI SAJA!!  
 
