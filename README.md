@@ -5,21 +5,21 @@ NEMO yang akan diinstall ialah NEMO versi 4.0 dengan konfigurasi grid 1/48 wilay
 
 ## 1. Persiapan Library  
 Saat pertama login anda akan berada di direktory HOME.  
-### 2. Jalankan perintah ini  
+### Jalankan perintah ini  
 echo module purge >> .bashrc  
 echo module load intel/2023.2.0 >> .bashrc  
 echo module load mpi/2021.10.0 >> .bashrc  
-### 3. running script library  
+### running script library  
 chmod +x install_nemo_library_intel.sh  
 ./install_nemo_library_.sh  
 
-Step 1-3 HANYA DIJALANKAN SEKALI SAJA!!  
+Step 1 HANYA DIJALANKAN SEKALI SAJA!!  
 
-## Persiapan source code
-Untuk menginstall NEMO dibutuhkan dua source code 
-1. NEMO   
-2. XIOS.
- 
+## 2. Persiapan source code
+Untuk menginstall NEMO dibutuhkan dua source code yaitu NEMO dan XIOS.  
+Jika akan melakukan kopel atmosfir dibutuhkan source code OASIS-MCT3  
+Model atmosfir yang digunakan ialah WRF.  
+Catatan :  
 NEMO melakukan komputasi paralel MPI.
 Perhitungan akan di bagi ke tiap prossesor sehingga tiap prossesor akan memberikan satu output file per perhitungan.    
 Untuk menggabungkan file dari tiap prosessor dibutuhkan software XIOS. 
