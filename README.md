@@ -15,45 +15,29 @@ chmod +x install_nemo_library_intel.sh
 ./install_nemo_library_.sh  
 ## Persiapan source code
 Untuk menginstall NEMO dibutuhkan dua source code 
-1. NEMO 
-2. XIOS. 
-NEMO melakukan komputasi paralel MPI. Perhitungan akan di bagi ke tiap prossesor sehingga tiap prossesor akan memberikan satu output file per perhitungan. Untuk menggabungkan file dari tiap prosessor dibutuhkan software XIOS. 
+1. NEMO   
+2. XIOS.   
+NEMO melakukan komputasi paralel MPI. Perhitungan akan di bagi ke tiap prossesor sehingga tiap prossesor akan memberikan satu output file per perhitungan.  
+Untuk menggabungkan file dari tiap prosessor dibutuhkan software XIOS. 
 Untuk NEMO versi 4.2 dibutuhkan XIOS versi 3.0. Selain itu tersedia XIOS versi 2.0. 
 download source code NEMO dan XIOS melalui link berikut:  
-
-############################  
-mkdir NEMO
-
-mkdir SOURCE
-
-cd SOURCE
-
 ############################
-# Download XIOS
+### buat direktory   
+mkdir NEMO  
+mkdir SOURCE  
+cd SOURCE  
+############################  
+#### Download XIOS  
+svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS3/trunk/ xios3    
+#### Download NEMO  
+git clone https://forge.nemo-ocean.eu/nemo/nemo.git nemo42  
+#### Download OASISMCT Untuk kopel dengan atmosfir  
+git clone https://gitlab.com/cerfacs/oasis3-mct.git oasis3  
+#### Download WRF dan WPS Untuk model atmosfir  
+git clone https://github.com/wrf-model/WRF.git  
+git clone https://github.com/wrf-model/WPS.git  
 
-svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS3/trunk/ xios3
-
-svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS2/trunk/ xios2
-
-# Download NEMO
-
-svn co https://forge.ipsl.jussieu.fr/nemo/svn/NEMO/releases/r4.0/r4.0.4/ nemo40
-
-svn co http://forge.ipsl.jussieu.fr/nemo/svn/NEMO/releases/release-3.6/ nemo36
-
-git clone https://forge.nemo-ocean.eu/nemo/nemo.git nemo42
-
-# Download OASISMCT
-
-git clone https://gitlab.com/cerfacs/oasis3-mct.git oasis3
-
-# Download WRF dan WPS
-
-git clone https://github.com/wrf-model/WRF.git
-
-git clone https://github.com/wrf-model/WPS.git
-
-# 1. INSTALL OASIS-MCT3 (jika ingin rinning model kopel laut-atm)
+### 1. INSTALL OASIS-MCT3 (jika ingin rinning model kopel laut-atm)
 
 cd /home/yoga/NEMO42/source/oasis3-mct/util/make_dir
 
