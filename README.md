@@ -9,8 +9,8 @@ Saat pertama login anda akan berada di direktory HOME.
 ### Jalankan perintah ini  
 echo module purge >> .bashrc  
 echo module load intel/2023.2.0 >> .bashrc  
-echo module load mpi/2021.10.0 >> .bashrc 
-echo module load cmake/3.24.2 >> .bashrc
+echo module load mpi/2021.10.0 >> .bashrc  
+echo module load cmake/3.24.2 >> .bashrc  
 ### running script library  
 chmod +x install_nemo_library_intel.sh  
 ./install_nemo_library_.sh  
