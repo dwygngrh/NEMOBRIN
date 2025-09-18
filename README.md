@@ -22,11 +22,9 @@ Untuk menggabungkan file dari tiap prosessor dibutuhkan software XIOS.
 Untuk NEMO versi 4.2 dibutuhkan XIOS versi 3.0. Selain itu tersedia XIOS versi 2.0. 
 download source code NEMO dan XIOS melalui link berikut:
 ### buat direktory   
-############################
 mkdir NEMO  
 mkdir SOURCE  
 cd SOURCE  
-############################  
 ### Download XIOS  
 svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS3/trunk/ xios3    
 ### Download NEMO  
