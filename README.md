@@ -2,6 +2,7 @@
 Selamat datang!  
 Pembuatan konfigurasi model Regional NEMO di HPC BRIN  
 NEMO yang akan diinstall ialah NEMO versi 4.0 dengan konfigurasi grid 1/48 wilayah timur indonesia  
+Download file di github ini dan copy ke direktory $HOME di akun anda
 
 ## 1. Persiapan Library Untuk pertama kali masuk akun BRIN HPC
 Saat pertama login anda akan berada di direktory HOME.  
@@ -16,7 +17,12 @@ chmod +x install_nemo_library_intel.sh
 wget https://repo.anaconda.com/miniconda/Miniconda3-py310_24.9.2-0-Linux-x86_64.sh  
 chmod +x Miniconda3-py310_24.9.2-0-Linux-x86_64.sh  
 ./Miniconda3-py310_24.9.2-0-Linux-x86_64.sh  
-echo source ${HOME}/miniconda3/etc/profile.d/conda.sh    
+echo source ${HOME}/miniconda3/etc/profile.d/conda.sh   
+conda activate  
+conda config --add channels conda-forge  
+conda config --set channel_priority strict  
+conda install subversion  
+
 
 ## Step 1 HANYA DIJALANKAN SEKALI SAJA!!  
 
@@ -45,7 +51,10 @@ git clone https://forge.nemo-ocean.eu/nemo/nemo.git nemo42
 git clone https://gitlab.com/cerfacs/oasis3-mct.git oasis3  
 ### download WRF dan WPS Untuk model atmosfir  
 git clone https://github.com/wrf-model/WRF.git  
-git clone https://github.com/wrf-model/WPS.git  
+git clone https://github.com/wrf-model/WPS.git
+
+tar -xvzf nemo-4.2.1.tar.gz -C ../
+
 ## 4. Install Software
 ### INSTALL XIOS  
 Jika ingin running kopel atmosfir, XIOS di instal dengan KEY OASIS. 
