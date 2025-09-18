@@ -37,13 +37,13 @@ Catatan :
 mkdir NEMO  
 mkdir SOURCE  
 cd SOURCE  
-### Download XIOS  
+### download XIOS  
 svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS3/trunk/ xios3    
-### Download NEMO  
+### download NEMO  
 git clone https://forge.nemo-ocean.eu/nemo/nemo.git nemo42  
-### 6. Download OASISMCT Untuk kopel dengan atmosfir  
+### download OASISMCT Untuk kopel dengan atmosfir  
 git clone https://gitlab.com/cerfacs/oasis3-mct.git oasis3  
-### 7. Download WRF dan WPS Untuk model atmosfir  
+### download WRF dan WPS Untuk model atmosfir  
 git clone https://github.com/wrf-model/WRF.git  
 git clone https://github.com/wrf-model/WPS.git  
 ## 4. Install Software
