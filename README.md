@@ -20,10 +20,11 @@ Step 1-3 HANYA DIJALANKAN SEKALI SAJA!!
 Untuk menginstall NEMO dibutuhkan dua source code 
 1. NEMO   
 2. XIOS.   
-NEMO melakukan komputasi paralel MPI. Perhitungan akan di bagi ke tiap prossesor sehingga tiap prossesor akan memberikan satu output file per perhitungan.  
+NEMO melakukan komputasi paralel MPI.
+Perhitungan akan di bagi ke tiap prossesor sehingga tiap prossesor akan memberikan satu output file per perhitungan.    
 Untuk menggabungkan file dari tiap prosessor dibutuhkan software XIOS. 
 Untuk NEMO versi 4.2 dibutuhkan XIOS versi 3.0. Selain itu tersedia XIOS versi 2.0. 
-download source code NEMO dan XIOS melalui link berikut:
+download source code NEMO dan XIOS melalui link berikut:  
 ### buat direktory   
 mkdir NEMO  
 mkdir SOURCE  
