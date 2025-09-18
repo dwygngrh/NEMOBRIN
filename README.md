@@ -41,14 +41,16 @@ git clone https://github.com/wrf-model/WPS.git
 ### 8. INSTALL OASIS-MCT3 (jika ingin running model kopel laut-atm) SKIP jika hanya ingin running model ocean
 cd /home/yoga/NEMO42/source/oasis3-mct/util/make_dir
 ubah di make.inc 
-include  /home/yoga/NEMO42/source/oasis3-mct/util/make_dir/make.intel-RCO-brin
-## buat architecture
+include  /home/yoga/NEMO42/source/oasis3-mct/util/make_dir/make.intel-RCO-brin  
+#### buat architecture  
 cp make.intel18.0.1.163_intelmpi2018.1.163-ddt_nemo make.intel-RCO-brin
 ubah di make.intel-RCO-brin
 COUPLE          = /home/yoga/NEMO42/source/oasis3-mct
 NETCDF_INC_DIR= ${NETCDF_INC} 
 NETCDF_INCLUDE  = ${NETCDF_INC}
-### 9. INSTALL XIOS
+### 9. INSTALL XIOS  
+Jika ingin running kopel atmosfir, XIOS di instal dengan KEY OASIS. 
+Jika hanya running laut saja jangan ditambahkan KEY OASIS
 XIOS dapat di install dengan KEY oasis "-DUSE_OMCT" atau tidak
 cd xios2 atau cd xios3
 Install XIOS tanpa KEY OASIS : ./make_xios --full --prod --arch Intel_BRIN -j4 |& tee compile_log.txt
