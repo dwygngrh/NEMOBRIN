@@ -7,7 +7,7 @@ Direktory home biasanya /HOME/userid/. sebagai contoh user id dwiy008 maka direk
 gunakan perintah ini scp -p 4022 "nama file" dwiy008@login2.hpc.brin.go.id:/home/dwiy008/  
 
 ## 1. Persiapan Library Untuk pertama kali masuk akun BRIN HPC
-Saat pertama login anda akan berada di direktory HOME.  
+Saat pertama login anda akan berada di direktory $HOME.  
 ### Jalankan perintah ini di direktory home    
 echo module purge >> .bashrc  
 echo module load intel/2023.2.0 >> .bashrc  
@@ -21,6 +21,10 @@ jalankan sampai selesai
 masukkan perintah ini setelah selesai  
 nf-config --all  
 jika tidak ada error maka instalasi berhasil  
+### buat link ke library yang di buat
+chmod +x echo_library.sh  
+./echo_library.sh
+source .bashrc
 ### install miniconda
 wget https://repo.anaconda.com/miniconda/Miniconda3-py310_24.9.2-0-Linux-x86_64.sh  
 chmod +x Miniconda3-py310_24.9.2-0-Linux-x86_64.sh  
@@ -55,7 +59,7 @@ svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS2/trunk/ xios2
 Jika ada masalah svn di HPC bisa download manual dari sini : https://drive.google.com/drive/folders/1OrfhpvsE-bXowlZ4KAD3FBMtO4XkPuJa?usp=drive_link  
 nanti file di upload ke hpc direktory $HOME/NEMO/source/  
 ### download NEMO (masih di direktori $HOME/NEMO/source)  
-https://forge.nemo-ocean.eu/nemo/nemo/-/archive/4.2.3/nemo-4.2.3.tar.gz 
+wget https://forge.nemo-ocean.eu/nemo/nemo/-/archive/4.2.3/nemo-4.2.3.tar.gz 
 ### download OASISMCT Untuk kopel dengan atmosfir (advanced user only)    
 git clone https://gitlab.com/cerfacs/oasis3-mct.git oasis3  
 ### download WRF dan WPS Untuk model atmosfir  (advanced user only)   
@@ -68,7 +72,7 @@ Jika ingin running kopel atmosfir, XIOS di instal dengan KEY OASIS.
 Jika hanya running laut saja jangan ditambahkan KEY OASIS  
 XIOS dapat di install dengan KEY oasis "-DUSE_OMCT" atau tidak  
 tar -xvzf xios2.tar.gz -C ../  
-cd xios2   
+cd ../xios2   
 Install XIOS tanpa KEY OASIS : ./make_xios --full --prod --arch Intel_BRIN -j4 |& tee compile_log.txt
 Install XIOS dengan KEY OASIS : ./make_xios --full --use_oasis oasis3_mct --prod --arch Intel_BRIN -j4 |& tee compile_log.txt
 ############################################################
