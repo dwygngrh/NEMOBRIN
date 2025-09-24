@@ -51,6 +51,8 @@ cd source
 ### download XIOS  
 svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS3/trunk/ xios3  
 svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS2/trunk/ xios2
+Jika ada masalah svn di HPC bisa download manual dari sini : https://drive.google.com/drive/folders/1OrfhpvsE-bXowlZ4KAD3FBMtO4XkPuJa?usp=drive_link  
+nanti file di upload ke hpc direktory $HOME/NEMO/source/  
 ### download NEMO  
 git clone https://forge.nemo-ocean.eu/nemo/nemo.git nemo42  
 ### download OASISMCT Untuk kopel dengan atmosfir  
