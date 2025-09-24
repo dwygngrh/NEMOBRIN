@@ -19,8 +19,8 @@ chmod +x install_nemo_library_intel.sh
 ./install_nemo_library_intel.sh  
 jalankan sampai selesai  
 masukkan perintah ini setelah selesai  
-nf-config --all  
-jika tidak ada error maka instalasi berhasil  
+nf-config 
+jika ada menu konfigurasi netcdf dan tidak ada error maka instalasi berhasil  
 ### buat link ke library yang di buat
 chmod +x echo_library.sh  
 ./echo_library.sh
@@ -54,9 +54,7 @@ mkdir NEMO
 mkdir source    
 cd source  
 ### download XIOS  
-svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS3/trunk/ xios3  
-svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS2/trunk/ xios2
-Jika ada masalah svn di HPC bisa download manual dari sini : https://drive.google.com/drive/folders/1OrfhpvsE-bXowlZ4KAD3FBMtO4XkPuJa?usp=drive_link  
+download manual dari sini : https://drive.google.com/drive/folders/1OrfhpvsE-bXowlZ4KAD3FBMtO4XkPuJa?usp=drive_link  
 nanti file di upload ke hpc direktory $HOME/NEMO/source/  
 ### download NEMO (masih di direktori $HOME/NEMO/source)  
 wget https://forge.nemo-ocean.eu/nemo/nemo/-/archive/4.2.3/nemo-4.2.3.tar.gz 
@@ -73,8 +71,8 @@ Jika hanya running laut saja jangan ditambahkan KEY OASIS
 XIOS dapat di install dengan KEY oasis "-DUSE_OMCT" atau tidak  
 tar -xvzf xios2.tar.gz -C ../  
 cd ../xios2   
-Install XIOS tanpa KEY OASIS : ./make_xios --full --prod --arch Intel_BRIN -j4 |& tee compile_log.txt
-Install XIOS dengan KEY OASIS : ./make_xios --full --use_oasis oasis3_mct --prod --arch Intel_BRIN -j4 |& tee compile_log.txt
+Install XIOS tanpa KEY OASIS : ./make_xios --full --prod --arch ifort_BRIN_2025 -j4 |& tee compile_log.txt  
+Install XIOS dengan KEY OASIS : ./make_xios --full --use_oasis oasis3_mct --prod --arch ifort_BRIN_2025 -j4 |& tee compile_log.txt  
 ############################################################
 ### Install NEMO
  cd NEMO
