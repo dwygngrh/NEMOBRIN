@@ -2,7 +2,8 @@
 Selamat datang!  
 Pembuatan konfigurasi model Regional NEMO di HPC BRIN  
 NEMO yang akan diinstall ialah NEMO versi 4.0 dengan konfigurasi grid 1/48 wilayah timur indonesia  
-Download file di github ini dan copy ke direktory $HOME di akun HPC  
+Download file di github ini dan copy ke direktory $HOME di akun HPC. 
+Direktory home biasanya /HOME/userid/. sebagai contoh user id dwiy008 maka direktory HOME ialah /home/dwiy008  
 gunakan perintah ini scp -p 4022 "nama file" dwiy008@login2.hpc.brin.go.id:/home/dwiy008/  
 
 ## 1. Persiapan Library Untuk pertama kali masuk akun BRIN HPC
