@@ -71,15 +71,16 @@ Jika hanya running laut saja jangan ditambahkan KEY OASIS
 XIOS dapat di install dengan KEY oasis "-DUSE_OMCT" atau tidak  
 tar -xvzf xios2.tar.gz -C ../  
 cd ../xios2   
-Install XIOS tanpa KEY OASIS : ./make_xios --full --prod --arch ifort_BRIN_2025 -j4 |& tee compile_log.txt  
-Install XIOS dengan KEY OASIS : ./make_xios --full --use_oasis oasis3_mct --prod --arch ifort_BRIN_2025 -j4 |& tee compile_log.txt  
+Install XIOS tanpa KEY OASIS :  
+./make_xios --full --prod --arch ifort_BRIN_2025 -j4 |& tee compile_log.txt  
+Install XIOS dengan KEY OASIS (advanced user only):  
+./make_xios --full --use_oasis oasis3_mct --prod --arch ifort_BRIN_2025 -j4 |& tee compile_log.txt  
 ############################################################
 ### Install NEMO
  cd NEMO
   arch-linux_local.fcm
 
 
-## Proses Instalasi Software
 ### 8. INSTALL OASIS-MCT3 (jika ingin running model kopel laut-atm) SKIP jika hanya ingin running model ocean
 cd /home/yoga/NEMO42/source/oasis3-mct/util/make_dir  
 ubah di make.inc 
