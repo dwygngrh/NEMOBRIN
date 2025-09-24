@@ -2,18 +2,24 @@
 Selamat datang!  
 Pembuatan konfigurasi model Regional NEMO di HPC BRIN  
 NEMO yang akan diinstall ialah NEMO versi 4.0 dengan konfigurasi grid 1/48 wilayah timur indonesia  
-Download file di github ini dan copy ke direktory $HOME di akun anda
+Download file di github ini dan copy ke direktory $HOME di akun HPC  
+gunakan perintah ini scp -p 4022 "nama file" dwiy008@login2.hpc.brin.go.id:/home/dwiy008/  
 
 ## 1. Persiapan Library Untuk pertama kali masuk akun BRIN HPC
 Saat pertama login anda akan berada di direktory HOME.  
-### Jalankan perintah ini  
+### Jalankan perintah ini di direktory home    
 echo module purge >> .bashrc  
 echo module load intel/2023.2.0 >> .bashrc  
 echo module load mpi/2021.10.0 >> .bashrc  
 echo module load cmake/3.24.2 >> .bashrc  
+source .bashrc
 ### running script library  
 chmod +x install_nemo_library_intel.sh  
-./install_nemo_library_.sh  
+./install_nemo_library_intel.sh  
+jalankan sampai selesai  
+masukkan perintah ini setelah selesai  
+nf-config --all  
+jika tidak ada error maka instalasi berhasil  
 ### install miniconda
 wget https://repo.anaconda.com/miniconda/Miniconda3-py310_24.9.2-0-Linux-x86_64.sh  
 chmod +x Miniconda3-py310_24.9.2-0-Linux-x86_64.sh  
@@ -26,12 +32,10 @@ conda install anaconda::pip
 pip install svn
 
 ## Step 1 HANYA DIJALANKAN SEKALI SAJA!!  
-
 ## 2. Persiapan source code
 Untuk menginstall NEMO OCEAN saja dibutuhkan dua source code yaitu NEMO dan XIOS.  
 Jika akan melakukan kopel atmosfir dibutuhkan source code OASIS-MCT3  
 Model atmosfir yang digunakan ialah WRF.  
-
 Catatan :  
 - Jangan install OASIS dan WRF jika tidak melakukan kopel dengan atmosfir  
 - NEMO melakukan komputasi paralel MPI.
@@ -42,10 +46,11 @@ Catatan :
 ## 3. Download Software  
 ### buat direktory   
 mkdir NEMO  
-mkdir SOURCE  
-cd SOURCE  
+mkdir source    
+cd source  
 ### download XIOS  
-svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS3/trunk/ xios3    
+svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS3/trunk/ xios3  
+svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS2/trunk/ xios2
 ### download NEMO  
 git clone https://forge.nemo-ocean.eu/nemo/nemo.git nemo42  
 ### download OASISMCT Untuk kopel dengan atmosfir  
@@ -53,9 +58,7 @@ git clone https://gitlab.com/cerfacs/oasis3-mct.git oasis3
 ### download WRF dan WPS Untuk model atmosfir  
 git clone https://github.com/wrf-model/WRF.git  
 git clone https://github.com/wrf-model/WPS.git
-
 tar -xvzf nemo-4.2.1.tar.gz -C ../
-
 ## 4. Install Software
 ### INSTALL XIOS  
 Jika ingin running kopel atmosfir, XIOS di instal dengan KEY OASIS. 
