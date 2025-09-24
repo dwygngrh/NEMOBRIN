@@ -80,8 +80,8 @@ Install XIOS dengan KEY OASIS (advanced user only):
  cd NEMO
   arch-linux_local.fcm
 
-
-### 8. INSTALL OASIS-MCT3 (jika ingin running model kopel laut-atm) SKIP jika hanya ingin running model ocean
+############### Instalasi NEMO selesai #####################
+### Install OASIS-MCT3 (jika ingin running model kopel laut-atm) SKIP jika hanya ingin running model ocean
 cd /home/yoga/NEMO42/source/oasis3-mct/util/make_dir  
 ubah di make.inc 
 include  /home/yoga/NEMO42/source/oasis3-mct/util/make_dir/make.intel-RCO-brin  
