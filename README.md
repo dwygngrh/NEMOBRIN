@@ -54,20 +54,21 @@ svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS3/trunk/ xios3
 svn co http://forge.ipsl.jussieu.fr/ioserver/svn/XIOS2/trunk/ xios2
 Jika ada masalah svn di HPC bisa download manual dari sini : https://drive.google.com/drive/folders/1OrfhpvsE-bXowlZ4KAD3FBMtO4XkPuJa?usp=drive_link  
 nanti file di upload ke hpc direktory $HOME/NEMO/source/  
-### download NEMO  
-git clone https://forge.nemo-ocean.eu/nemo/nemo.git nemo42  
-### download OASISMCT Untuk kopel dengan atmosfir  
+### download NEMO (masih di direktori $HOME/NEMO/source)  
+https://forge.nemo-ocean.eu/nemo/nemo/-/archive/4.2.3/nemo-4.2.3.tar.gz 
+### download OASISMCT Untuk kopel dengan atmosfir (advanced user only)    
 git clone https://gitlab.com/cerfacs/oasis3-mct.git oasis3  
-### download WRF dan WPS Untuk model atmosfir  
+### download WRF dan WPS Untuk model atmosfir  (advanced user only)   
 git clone https://github.com/wrf-model/WRF.git  
 git clone https://github.com/wrf-model/WPS.git
-tar -xvzf nemo-4.2.1.tar.gz -C ../
+tar -xvzf nemo-4.2.3.tar.gz -C ../
 ## 4. Install Software
-### INSTALL XIOS  
+### INSTALL XIOS (masih di direktori $HOME/NEMO/source)
 Jika ingin running kopel atmosfir, XIOS di instal dengan KEY OASIS. 
 Jika hanya running laut saja jangan ditambahkan KEY OASIS  
 XIOS dapat di install dengan KEY oasis "-DUSE_OMCT" atau tidak  
-cd xios3  
+tar -xvzf xios2.tar.gz -C ../  
+cd xios2   
 Install XIOS tanpa KEY OASIS : ./make_xios --full --prod --arch Intel_BRIN -j4 |& tee compile_log.txt
 Install XIOS dengan KEY OASIS : ./make_xios --full --use_oasis oasis3_mct --prod --arch Intel_BRIN -j4 |& tee compile_log.txt
 ############################################################
