@@ -34,7 +34,8 @@ conda activate
 conda config --add channels conda-forge  
 conda config --set channel_priority strict  
 conda install anaconda::pip
-pip install svn
+pip install svn  
+conda install conda-forge::ncview  
 
 ## Step 1 HANYA DIJALANKAN SEKALI SAJA!!  
 ## 2. Persiapan source code
